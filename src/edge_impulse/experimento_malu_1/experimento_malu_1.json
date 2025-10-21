@@ -1,0 +1,103 @@
+{
+    "version": 6,
+    "validation": {
+        "int8": {
+            "support": 1465344,
+            "confusion_matrix": [
+                [
+                    1465027,
+                    82
+                ],
+                [
+                    86,
+                    149
+                ]
+            ],
+            "non_background": {
+                "precision": 0.645021645021645,
+                "recall": 0.6340425531914894,
+                "f1": 0.6394849785407726
+            },
+            "classification_report": {
+                "0": {
+                    "precision": 0.9999413014559286,
+                    "recall": 0.9999440314679658,
+                    "f1-score": 0.9999426664600839,
+                    "support": 1465109
+                },
+                "1": {
+                    "precision": 0.645021645021645,
+                    "recall": 0.6340425531914894,
+                    "f1-score": 0.6394849785407726,
+                    "support": 235
+                },
+                "accuracy": 0.9998853511530398,
+                "macro avg": {
+                    "precision": 0.8224814732387868,
+                    "recall": 0.8169932923297276,
+                    "f1-score": 0.8197138225004282,
+                    "support": 1465344
+                },
+                "weighted avg": {
+                    "precision": 0.999884382316626,
+                    "recall": 0.9998853511530398,
+                    "f1-score": 0.9998848591761552,
+                    "support": 1465344
+                }
+            },
+            "class_names": [
+                "_background",
+                "bus"
+            ]
+        },
+        "float32": {
+            "support": 1465344,
+            "confusion_matrix": [
+                [
+                    1465017,
+                    88
+                ],
+                [
+                    81,
+                    158
+                ]
+            ],
+            "non_background": {
+                "precision": 0.6422764227642277,
+                "recall": 0.6610878661087866,
+                "f1": 0.6515463917525773
+            },
+            "classification_report": {
+                "0": {
+                    "precision": 0.9999447135959506,
+                    "recall": 0.9999399360455394,
+                    "f1-score": 0.9999423248150384,
+                    "support": 1465105
+                },
+                "1": {
+                    "precision": 0.6422764227642277,
+                    "recall": 0.6610878661087866,
+                    "f1-score": 0.6515463917525773,
+                    "support": 239
+                },
+                "accuracy": 0.9998846687194269,
+                "macro avg": {
+                    "precision": 0.8211105681800892,
+                    "recall": 0.8305139010771629,
+                    "f1-score": 0.8257443582838079,
+                    "support": 1465344
+                },
+                "weighted avg": {
+                    "precision": 0.9998863773134745,
+                    "recall": 0.9998846687194269,
+                    "f1-score": 0.9998855008692605,
+                    "support": 1465344
+                }
+            },
+            "class_names": [
+                "_background",
+                "bus"
+            ]
+        }
+    }
+}
