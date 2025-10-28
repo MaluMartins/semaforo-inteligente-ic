@@ -1,0 +1,1625 @@
+{
+    "success": true,
+    "impulses": [
+        {
+            "impulse": {
+                "id": 1,
+                "name": "Impulse #1",
+                "inputBlocks": [
+                    {
+                        "id": 33,
+                        "type": "image",
+                        "name": "Image",
+                        "title": "Image data",
+                        "resizeMethod": "lanczos3",
+                        "imageWidth": 96,
+                        "imageHeight": 96,
+                        "resizeMode": "fit-short",
+                        "cropAnchor": "middle-center"
+                    }
+                ],
+                "dspBlocks": [
+                    {
+                        "id": 34,
+                        "type": "image",
+                        "name": "Image",
+                        "axes": [
+                            "image"
+                        ],
+                        "title": "Image",
+                        "input": 33,
+                        "implementationVersion": 1,
+                        "namedAxes": [
+                            {
+                                "name": "Image",
+                                "required": true,
+                                "selectedAxis": "image"
+                            }
+                        ]
+                    }
+                ],
+                "learnBlocks": [
+                    {
+                        "id": 36,
+                        "type": "keras",
+                        "name": "Classifier",
+                        "dsp": [
+                            34
+                        ],
+                        "title": "Classification",
+                        "createdBy": "createImpulse",
+                        "createdAt": "2025-10-08T11:57:51.878Z"
+                    }
+                ],
+                "postProcessingBlocks": [],
+                "type": "default",
+                "createdByUser": {
+                    "id": 394022,
+                    "name": "ChristianHenriquedeSousa",
+                    "username": "ChristianHenriquedeSousa"
+                },
+                "tags": []
+            },
+            "metrics": [
+                {
+                    "name": "Img_Height",
+                    "description": "Image height",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "value": "96",
+                    "valueForSorting": 96,
+                    "category": "inputBlockConfig"
+                },
+                {
+                    "name": "Img_Width",
+                    "description": "Image width",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "value": "96",
+                    "valueForSorting": 96,
+                    "category": "inputBlockConfig"
+                },
+                {
+                    "name": "Resize_Mode",
+                    "description": "Resize mode",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "select",
+                        "options": [
+                            "squash",
+                            "fit-short",
+                            "fit-long",
+                            "crop"
+                        ]
+                    },
+                    "value": "fit-short",
+                    "category": "inputBlockConfig"
+                },
+                {
+                    "name": "Norm",
+                    "description": "Normalization",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "select",
+                        "options": [
+                            "None",
+                            "StandardScaler"
+                        ]
+                    },
+                    "value": "None",
+                    "category": "dspBlockConfig"
+                },
+                {
+                    "name": "Col_dep",
+                    "description": "Image > Color depth (Processing Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "string",
+                        "options": []
+                    },
+                    "value": "Grayscale",
+                    "category": "dspBlockConfig"
+                },
+                {
+                    "name": "Model",
+                    "description": "ML Model architecture (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "string",
+                        "options": []
+                    },
+                    "value": "c8 × c16 × c32 × c64 × do0.25 × f × d100 × d100",
+                    "category": "learnBlockConfig"
+                },
+                {
+                    "name": "Tc",
+                    "description": "Training cycles (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "value": "15",
+                    "valueForSorting": 15,
+                    "category": "learnBlockConfig"
+                },
+                {
+                    "name": "Lr",
+                    "description": "Learning rate (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "value": "0.001",
+                    "valueForSorting": 0.001,
+                    "category": "learnBlockConfig"
+                },
+                {
+                    "name": "Lo",
+                    "description": "Use learned optimizer? (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "boolean",
+                        "options": []
+                    },
+                    "value": false,
+                    "category": "learnBlockConfig"
+                },
+                {
+                    "name": "Acw",
+                    "description": "Auto-weight classes (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "boolean",
+                        "options": []
+                    },
+                    "value": false,
+                    "category": "learnBlockConfig"
+                },
+                {
+                    "name": "Data_Aug",
+                    "description": "Data augmentation (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "boolean",
+                        "options": []
+                    },
+                    "value": false,
+                    "category": "learnBlockConfig"
+                },
+                {
+                    "name": "Val_Size",
+                    "description": "Validation set size (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "value": "0.2",
+                    "valueForSorting": 0.2,
+                    "category": "learnBlockConfig"
+                },
+                {
+                    "name": "Val_Key",
+                    "description": "Split train/validation set on metadata key (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "string",
+                        "options": []
+                    },
+                    "value": "",
+                    "category": "learnBlockConfig"
+                },
+                {
+                    "name": "Mode",
+                    "description": "Visual / expert mode (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "select",
+                        "options": [
+                            "visual",
+                            "expert"
+                        ]
+                    },
+                    "value": "visual",
+                    "category": "learnBlockConfig"
+                },
+                {
+                    "name": "Thr_Mcr",
+                    "description": "Minimum confidence rating (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "value": "0.6",
+                    "valueForSorting": 0.6,
+                    "category": "learnBlockConfig"
+                },
+                {
+                    "name": "f32_V_Acc",
+                    "description": "Accuracy (float32, validation set)",
+                    "value": "80.9%",
+                    "valueForSorting": 80.88033012379643,
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "impulseMetrics"
+                },
+                {
+                    "name": "f32_T_Acc",
+                    "description": "Accuracy (float32, test set)",
+                    "value": "72.9%",
+                    "valueForSorting": 72.86821705426357,
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "impulseMetrics"
+                },
+                {
+                    "name": "i8_V_Acc",
+                    "description": "Accuracy (int8, validation set)",
+                    "value": "80.9%",
+                    "valueForSorting": 80.88033012379643,
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "impulseMetrics"
+                },
+                {
+                    "name": "i8_T_Acc",
+                    "description": "Accuracy (int8, test set)",
+                    "value": "-",
+                    "valueForSorting": -1,
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "impulseMetrics"
+                },
+                {
+                    "name": "f32_Latency",
+                    "description": "float32 Latency for the complete impulse. Estimate for Espressif ESP-EYE (ESP32 240MHz), you can change the target at the top of this page..",
+                    "value": "2383 ms.",
+                    "valueForSorting": 2383,
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "impulseMetrics"
+                },
+                {
+                    "name": "f32_RAM",
+                    "description": "float32 RAM for the complete impulse. Estimate for Espressif ESP-EYE (ESP32 240MHz), you can change the target at the top of this page. (in RAM Optimized mode).",
+                    "value": "252.8K",
+                    "valueForSorting": 258864,
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "impulseMetrics"
+                },
+                {
+                    "name": "f32_Flash",
+                    "description": "float32 Flash for the complete impulse. Estimate for Espressif ESP-EYE (ESP32 240MHz), you can change the target at the top of this page. (in RAM Optimized mode).",
+                    "value": "388.3K",
+                    "valueForSorting": 397568,
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "impulseMetrics"
+                },
+                {
+                    "name": "i8_Latency",
+                    "description": "int8 Latency for the complete impulse. Estimate for Espressif ESP-EYE (ESP32 240MHz), you can change the target at the top of this page..",
+                    "value": "618 ms.",
+                    "valueForSorting": 618,
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "impulseMetrics"
+                },
+                {
+                    "name": "i8_RAM",
+                    "description": "int8 RAM for the complete impulse. Estimate for Espressif ESP-EYE (ESP32 240MHz), you can change the target at the top of this page. (in RAM Optimized mode).",
+                    "value": "77.6K",
+                    "valueForSorting": 79504,
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "impulseMetrics"
+                },
+                {
+                    "name": "i8_Flash",
+                    "description": "int8 Flash for the complete impulse. Estimate for Espressif ESP-EYE (ESP32 240MHz), you can change the target at the top of this page. (in RAM Optimized mode).",
+                    "value": "134.3K",
+                    "valueForSorting": 137512,
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "impulseMetrics"
+                },
+                {
+                    "name": "f32_V_AUC",
+                    "description": "float32 Area under ROC Curve (validation set)",
+                    "value": "0.89",
+                    "valueForSorting": 0.8872983243599156,
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "learnBlockMetrics"
+                },
+                {
+                    "name": "f32_V_WA_P",
+                    "description": "float32 Weighted average Precision (validation set)",
+                    "value": "0.72",
+                    "valueForSorting": 0.7158592688449026,
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "learnBlockMetrics"
+                },
+                {
+                    "name": "f32_V_WA_R",
+                    "description": "float32 Weighted average Recall (validation set)",
+                    "value": "0.81",
+                    "valueForSorting": 0.8088033012379643,
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "learnBlockMetrics"
+                },
+                {
+                    "name": "f32_V_WA_F1",
+                    "description": "float32 Weighted average F1 score (validation set)",
+                    "value": "0.76",
+                    "valueForSorting": 0.756763313688057,
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "learnBlockMetrics"
+                },
+                {
+                    "name": "f32_T_AUC",
+                    "description": "float32 Area under ROC Curve (test set)",
+                    "value": "0.86",
+                    "valueForSorting": 0.8641492488102818,
+                    "type": "additional",
+                    "category": "learnBlockMetrics"
+                },
+                {
+                    "name": "f32_T_WA_P",
+                    "description": "float32 Weighted average Precision (test set)",
+                    "value": "0.72",
+                    "valueForSorting": 0.7215940141290045,
+                    "type": "additional",
+                    "category": "learnBlockMetrics"
+                },
+                {
+                    "name": "f32_T_WA_R",
+                    "description": "float32 Weighted average Recall (test set)",
+                    "value": "0.81",
+                    "valueForSorting": 0.805094130675526,
+                    "type": "additional",
+                    "category": "learnBlockMetrics"
+                },
+                {
+                    "name": "f32_T_WA_F1",
+                    "description": "float32 Weighted average F1 score (test set)",
+                    "value": "0.76",
+                    "valueForSorting": 0.7581892725928735,
+                    "type": "additional",
+                    "category": "learnBlockMetrics"
+                },
+                {
+                    "name": "i8_V_AUC",
+                    "description": "int8 Area under ROC Curve (validation set)",
+                    "value": "0.89",
+                    "valueForSorting": 0.8861335300041105,
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "learnBlockMetrics"
+                },
+                {
+                    "name": "i8_V_WA_P",
+                    "description": "int8 Weighted average Precision (validation set)",
+                    "value": "0.72",
+                    "valueForSorting": 0.715891475176207,
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "learnBlockMetrics"
+                },
+                {
+                    "name": "i8_V_WA_R",
+                    "description": "int8 Weighted average Recall (validation set)",
+                    "value": "0.81",
+                    "valueForSorting": 0.8088033012379643,
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "learnBlockMetrics"
+                },
+                {
+                    "name": "i8_V_WA_F1",
+                    "description": "int8 Weighted average F1 score (validation set)",
+                    "value": "0.76",
+                    "valueForSorting": 0.756967790528503,
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "category": "learnBlockMetrics"
+                }
+            ],
+            "dspBlockConfigs": [
+                {
+                    "blockId": 34,
+                    "config": {
+                        "dsp": {
+                            "name": "Image",
+                            "id": 34,
+                            "type": "image",
+                            "windowLength": 0,
+                            "expectedWindowCount": 0,
+                            "inputAxes": [
+                                "image"
+                            ],
+                            "classes": [],
+                            "features": {
+                                "generated": true,
+                                "count": 9216,
+                                "labels": [
+                                    "Visualization layer 1",
+                                    "Visualization layer 2",
+                                    "Visualization layer 3"
+                                ],
+                                "classes": []
+                            },
+                            "performance": {
+                                "latency": 15,
+                                "ram": 4096
+                            },
+                            "canCalculateFeatureImportance": false,
+                            "calculateFeatureImportance": false,
+                            "hasAutotunerResults": false,
+                            "usesState": false,
+                            "canNormalizeData": false,
+                            "normalizeData": "none"
+                        },
+                        "config": [
+                            {
+                                "group": "Image",
+                                "items": [
+                                    {
+                                        "name": "Color depth",
+                                        "value": "Grayscale",
+                                        "defaultValue": "Grayscale",
+                                        "selectOptions": [
+                                            {
+                                                "value": "Grayscale",
+                                                "selected": true,
+                                                "optionLabel": "Grayscale"
+                                            }
+                                        ],
+                                        "type": "select",
+                                        "help": "Color depth to use",
+                                        "param": "channels",
+                                        "readonly": false,
+                                        "shouldShow": true,
+                                        "required": true,
+                                        "showClickToSet": false
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "metadata": {
+                        "created": "2025-10-22T01:30:01.133Z",
+                        "generated": true,
+                        "dspConfig": {
+                            "channels": "Grayscale"
+                        },
+                        "labels": [],
+                        "windowCount": 3633,
+                        "featureCount": 9216,
+                        "includedSamples": [],
+                        "windowIncreaseMs": 0,
+                        "padZeros": false,
+                        "windowSizeMs": 0,
+                        "frequency": 0,
+                        "outputConfig": {
+                            "type": "image",
+                            "shape": {
+                                "width": 96,
+                                "height": 96,
+                                "channels": 1,
+                                "frames": 1
+                            }
+                        },
+                        "fftUsed": [],
+                        "featureExplorerJobFailed": false,
+                        "featureImportanceJobFailed": false
+                    }
+                }
+            ],
+            "learnBlockKerasConfigs": [
+                {
+                    "blockId": 36,
+                    "config": {
+                        "name": "Classifier",
+                        "type": "keras",
+                        "trained": true,
+                        "dependencies": {
+                            "classes": [],
+                            "blockNames": [
+                                "Image"
+                            ],
+                            "featureCount": 9216,
+                            "sampleCount": 3633
+                        },
+                        "script": "import tensorflow as tf\nfrom tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import Dense, InputLayer, Dropout, Conv1D, Conv2D, Flatten, Reshape, MaxPooling1D, MaxPooling2D, AveragePooling2D, BatchNormalization, Permute, ReLU, Softmax\nfrom tensorflow.keras.optimizers.legacy import Adam\n\nEPOCHS = args.epochs or 15\nLEARNING_RATE = args.learning_rate or 0.001\n# If True, non-deterministic functions (e.g. shuffling batches) are not used.\n# This is False by default.\nENSURE_DETERMINISM = args.ensure_determinism\n# this controls the batch size, or you can manipulate the tf.data.Dataset objects yourself\nBATCH_SIZE = args.batch_size or 32\nif not ENSURE_DETERMINISM:\n    train_dataset = train_dataset.shuffle(buffer_size=BATCH_SIZE*4)\ntrain_dataset=train_dataset.batch(BATCH_SIZE, drop_remainder=False)\nvalidation_dataset = validation_dataset.batch(BATCH_SIZE, drop_remainder=False)\n\n# model architecture\nmodel = Sequential()\nmodel.add(Conv2D(8, kernel_size=3, kernel_constraint=tf.keras.constraints.MaxNorm(1), padding='same', activation='relu'))\nmodel.add(MaxPooling2D(pool_size=2, strides=2, padding='same'))\nmodel.add(Conv2D(8, kernel_size=3, kernel_constraint=tf.keras.constraints.MaxNorm(1), padding='same', activation='relu'))\nmodel.add(MaxPooling2D(pool_size=2, strides=2, padding='same'))\nmodel.add(Conv2D(16, kernel_size=3, kernel_constraint=tf.keras.constraints.MaxNorm(1), padding='same', activation='relu'))\nmodel.add(MaxPooling2D(pool_size=2, strides=2, padding='same'))\nmodel.add(Conv2D(16, kernel_size=3, kernel_constraint=tf.keras.constraints.MaxNorm(1), padding='same', activation='relu'))\nmodel.add(MaxPooling2D(pool_size=2, strides=2, padding='same'))\nmodel.add(Conv2D(32, kernel_size=3, kernel_constraint=tf.keras.constraints.MaxNorm(1), padding='same', activation='relu'))\nmodel.add(MaxPooling2D(pool_size=2, strides=2, padding='same'))\nmodel.add(Conv2D(32, kernel_size=3, kernel_constraint=tf.keras.constraints.MaxNorm(1), padding='same', activation='relu'))\nmodel.add(MaxPooling2D(pool_size=2, strides=2, padding='same'))\nmodel.add(Conv2D(64, kernel_size=3, kernel_constraint=tf.keras.constraints.MaxNorm(1), padding='same', activation='relu'))\nmodel.add(MaxPooling2D(pool_size=2, strides=2, padding='same'))\nmodel.add(Conv2D(64, kernel_size=3, kernel_constraint=tf.keras.constraints.MaxNorm(1), padding='same', activation='relu'))\nmodel.add(MaxPooling2D(pool_size=2, strides=2, padding='same'))\nmodel.add(Dropout(0.25))\nmodel.add(Flatten())\nmodel.add(Dense(100, activation='relu',\n    activity_regularizer=tf.keras.regularizers.l1(0.00001)))\nmodel.add(Dense(100, activation='relu',\n    activity_regularizer=tf.keras.regularizers.l1(0.00001)))\nmodel.add(Dense(classes, name='y_pred', activation='softmax'))\n\n# this controls the learning rate\nopt = Adam(learning_rate=LEARNING_RATE, beta_1=0.9, beta_2=0.999)\ncallbacks.append(BatchLoggerCallback(BATCH_SIZE, train_sample_count, epochs=EPOCHS, ensure_determinism=ENSURE_DETERMINISM))\n\n# train the neural network\nmodel.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['accuracy'])\nmodel.fit(train_dataset, epochs=EPOCHS, validation_data=validation_dataset, verbose=2, callbacks=callbacks)\n\n# Use this flag to disable per-channel quantization for a model.\n# This can reduce RAM usage for convolutional models, but may have\n# an impact on accuracy.\ndisable_per_channel_quantization = False",
+                        "minimumConfidenceRating": 0.6,
+                        "selectedModelType": "int8",
+                        "mode": "visual",
+                        "trainingCycles": 15,
+                        "learningRate": 0.001,
+                        "trainTestSplit": 0.2,
+                        "autoClassWeights": false,
+                        "useLearnedOptimizer": false,
+                        "visualLayers": [
+                            {
+                                "type": "conv2d",
+                                "kernelSize": 3,
+                                "neurons": 8,
+                                "stack": 2
+                            },
+                            {
+                                "type": "conv2d",
+                                "kernelSize": 3,
+                                "neurons": 16,
+                                "stack": 2,
+                                "enabled": true
+                            },
+                            {
+                                "type": "conv2d",
+                                "kernelSize": 3,
+                                "neurons": 32,
+                                "stack": 2
+                            },
+                            {
+                                "type": "conv2d",
+                                "kernelSize": 3,
+                                "neurons": 64,
+                                "stack": 2
+                            },
+                            {
+                                "type": "dropout",
+                                "dropoutRate": 0.25
+                            },
+                            {
+                                "type": "flatten"
+                            },
+                            {
+                                "type": "dense",
+                                "neurons": 100
+                            },
+                            {
+                                "type": "dense",
+                                "neurons": 100
+                            }
+                        ],
+                        "augmentationPolicyImage": "none",
+                        "augmentationPolicySpectrogram": {
+                            "enabled": false
+                        },
+                        "transferLearningModels": [],
+                        "shape": "(96, 96, 1)",
+                        "profileInt8": true,
+                        "skipEmbeddingsAndMemory": false,
+                        "customValidationMetadataKey": "",
+                        "showAdvancedTrainingSettings": true,
+                        "showAugmentationTrainingSettings": false,
+                        "defaultBatchSize": 32,
+                        "blockParameters": {},
+                        "thresholds": [
+                            {
+                                "key": "min_confidence_rating",
+                                "description": "Minimum confidence rating",
+                                "helpText": "Threshold score for trusting the model. If the confidence rating is below this value the sample will be tagged as 'uncertain'.",
+                                "value": 0.6
+                            }
+                        ],
+                        "customParameters": {}
+                    },
+                    "metadata": {
+                        "created": "2025-10-23T11:22:18.874Z",
+                        "layers": [
+                            {
+                                "input": {
+                                    "shape": 96,
+                                    "name": "conv2d_input",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 96,
+                                    "name": "conv2d/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 96,
+                                    "name": "conv2d/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 48,
+                                    "name": "max_pooling2d/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 48,
+                                    "name": "max_pooling2d/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 48,
+                                    "name": "conv2d_1/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 48,
+                                    "name": "conv2d_1/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 24,
+                                    "name": "max_pooling2d_1/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 24,
+                                    "name": "max_pooling2d_1/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 24,
+                                    "name": "conv2d_2/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 24,
+                                    "name": "conv2d_2/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 12,
+                                    "name": "max_pooling2d_2/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 12,
+                                    "name": "max_pooling2d_2/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 12,
+                                    "name": "conv2d_3/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 12,
+                                    "name": "conv2d_3/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 6,
+                                    "name": "max_pooling2d_3/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 6,
+                                    "name": "max_pooling2d_3/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 6,
+                                    "name": "conv2d_4/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 6,
+                                    "name": "conv2d_4/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 3,
+                                    "name": "max_pooling2d_4/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 3,
+                                    "name": "max_pooling2d_4/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 3,
+                                    "name": "conv2d_5/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 3,
+                                    "name": "conv2d_5/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 2,
+                                    "name": "max_pooling2d_5/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 2,
+                                    "name": "max_pooling2d_5/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 2,
+                                    "name": "conv2d_6/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 2,
+                                    "name": "conv2d_6/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 1,
+                                    "name": "max_pooling2d_6/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 1,
+                                    "name": "max_pooling2d_6/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 1,
+                                    "name": "conv2d_7/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 1,
+                                    "name": "conv2d_7/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 1,
+                                    "name": "max_pooling2d_7/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 1,
+                                    "name": "max_pooling2d_7/MaxPool:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 1,
+                                    "name": "dropout/Identity:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 1,
+                                    "name": "dropout/Identity:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 64,
+                                    "name": "flatten/Reshape:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 64,
+                                    "name": "flatten/Reshape:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 100,
+                                    "name": "dense/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 100,
+                                    "name": "dense/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 100,
+                                    "name": "dense_1/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            },
+                            {
+                                "input": {
+                                    "shape": 100,
+                                    "name": "dense_1/Relu:0",
+                                    "type": "<dtype: 'float32'>"
+                                },
+                                "output": {
+                                    "shape": 4,
+                                    "name": "y_pred/Softmax:0",
+                                    "type": "<dtype: 'float32'>"
+                                }
+                            }
+                        ],
+                        "classNames": [
+                            "Caminhao",
+                            "Carros",
+                            "Motos",
+                            "Onibus"
+                        ],
+                        "availableModelTypes": [
+                            "float32",
+                            "int8"
+                        ],
+                        "recommendedModelType": "int8",
+                        "modelValidationMetrics": [
+                            {
+                                "type": "float32",
+                                "report": {
+                                    "0": {
+                                        "precision": 0,
+                                        "recall": 0,
+                                        "f1-score": 0,
+                                        "support": 81
+                                    },
+                                    "1": {
+                                        "precision": 0.9008097165991903,
+                                        "recall": 0.9549356223175965,
+                                        "f1-score": 0.9270833333333333,
+                                        "support": 466
+                                    },
+                                    "2": {
+                                        "precision": 0,
+                                        "recall": 0,
+                                        "f1-score": 0,
+                                        "support": 16
+                                    },
+                                    "3": {
+                                        "precision": 0.6137339055793991,
+                                        "recall": 0.8719512195121951,
+                                        "f1-score": 0.7204030226700252,
+                                        "support": 164
+                                    },
+                                    "accuracy": 0.8088033012379643,
+                                    "macro avg": {
+                                        "precision": 0.3786359055446473,
+                                        "recall": 0.4567217104574479,
+                                        "f1-score": 0.41187158900083964,
+                                        "support": 727
+                                    },
+                                    "weighted avg": {
+                                        "precision": 0.7158592688449026,
+                                        "recall": 0.8088033012379643,
+                                        "f1-score": 0.756763313688057,
+                                        "support": 727
+                                    }
+                                },
+                                "loss": 0.5153952446506388,
+                                "confusionMatrix": [
+                                    [
+                                        0,
+                                        28,
+                                        0,
+                                        53
+                                    ],
+                                    [
+                                        0,
+                                        445,
+                                        0,
+                                        21
+                                    ],
+                                    [
+                                        0,
+                                        0,
+                                        0,
+                                        16
+                                    ],
+                                    [
+                                        0,
+                                        21,
+                                        0,
+                                        143
+                                    ]
+                                ],
+                                "accuracy": 0.8088033012379643,
+                                "onDevicePerformance": [
+                                    {
+                                        "mcu": "espressif-esp32",
+                                        "name": "Espressif ESP-EYE (ESP32 240MHz)",
+                                        "isDefault": true,
+                                        "latency": 2368,
+                                        "eon": {
+                                            "ramRequired": 372112,
+                                            "romRequired": 384096,
+                                            "arenaSize": 0,
+                                            "modelSize": 368992
+                                        },
+                                        "eon_ram_optimized": {
+                                            "ramRequired": 258864,
+                                            "romRequired": 397568,
+                                            "arenaSize": 0,
+                                            "modelSize": 368992
+                                        },
+                                        "tflite": {
+                                            "ramRequired": 449915,
+                                            "romRequired": 414168,
+                                            "arenaSize": 449651,
+                                            "modelSize": 368992
+                                        },
+                                        "hasPerformance": true
+                                    }
+                                ],
+                                "visualization": "featureExplorer",
+                                "isSupportedOnMcu": true,
+                                "mcuSupportError": null,
+                                "additionalMetrics": [
+                                    {
+                                        "name": "Area under ROC Curve",
+                                        "value": "0.89",
+                                        "fullPrecisionValue": 0.8872983243599156,
+                                        "tooltipText": "Area Under the Receiver Operating Characteristic Curve. As provided by sklearn.metrics.roc_auc_score",
+                                        "link": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html"
+                                    },
+                                    {
+                                        "name": "Weighted average Precision",
+                                        "value": "0.72",
+                                        "fullPrecisionValue": 0.7158592688449026,
+                                        "tooltipText": "Weighted average precision. (averaging the support-weighted mean per label). As provided by sklearn.metrics.classification_report",
+                                        "link": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html"
+                                    },
+                                    {
+                                        "name": "Weighted average Recall",
+                                        "value": "0.81",
+                                        "fullPrecisionValue": 0.8088033012379643,
+                                        "tooltipText": "Weighted average recall. (averaging the support-weighted mean per label). As provided by sklearn.metrics.classification_report",
+                                        "link": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html"
+                                    },
+                                    {
+                                        "name": "Weighted average F1 score",
+                                        "value": "0.76",
+                                        "fullPrecisionValue": 0.756763313688057,
+                                        "tooltipText": "Weighted average f1 score. (averaging the support-weighted mean per label). As provided by sklearn.metrics.classification_report",
+                                        "link": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "int8",
+                                "report": {
+                                    "0": {
+                                        "precision": 0,
+                                        "recall": 0,
+                                        "f1-score": 0,
+                                        "support": 81
+                                    },
+                                    "1": {
+                                        "precision": 0.898989898989899,
+                                        "recall": 0.9549356223175965,
+                                        "f1-score": 0.9261186264308012,
+                                        "support": 466
+                                    },
+                                    "2": {
+                                        "precision": 0,
+                                        "recall": 0,
+                                        "f1-score": 0,
+                                        "support": 16
+                                    },
+                                    "3": {
+                                        "precision": 0.6190476190476191,
+                                        "recall": 0.8719512195121951,
+                                        "f1-score": 0.7240506329113924,
+                                        "support": 164
+                                    },
+                                    "accuracy": 0.8088033012379643,
+                                    "macro avg": {
+                                        "precision": 0.3795093795093795,
+                                        "recall": 0.4567217104574479,
+                                        "f1-score": 0.4125423148355484,
+                                        "support": 727
+                                    },
+                                    "weighted avg": {
+                                        "precision": 0.715891475176207,
+                                        "recall": 0.8088033012379643,
+                                        "f1-score": 0.756967790528503,
+                                        "support": 727
+                                    }
+                                },
+                                "loss": 0.5170759006258191,
+                                "confusionMatrix": [
+                                    [
+                                        0,
+                                        29,
+                                        0,
+                                        52
+                                    ],
+                                    [
+                                        0,
+                                        445,
+                                        0,
+                                        21
+                                    ],
+                                    [
+                                        0,
+                                        1,
+                                        0,
+                                        15
+                                    ],
+                                    [
+                                        1,
+                                        20,
+                                        0,
+                                        143
+                                    ]
+                                ],
+                                "accuracy": 0.8088033012379643,
+                                "onDevicePerformance": [
+                                    {
+                                        "mcu": "espressif-esp32",
+                                        "name": "Espressif ESP-EYE (ESP32 240MHz)",
+                                        "isDefault": true,
+                                        "latency": 603,
+                                        "eon": {
+                                            "ramRequired": 104368,
+                                            "romRequired": 124080,
+                                            "arenaSize": 0,
+                                            "modelSize": 105960
+                                        },
+                                        "eon_ram_optimized": {
+                                            "ramRequired": 79504,
+                                            "romRequired": 137512,
+                                            "arenaSize": 0,
+                                            "modelSize": 105960
+                                        },
+                                        "tflite": {
+                                            "ramRequired": 120596,
+                                            "romRequired": 151136,
+                                            "arenaSize": 120332,
+                                            "modelSize": 105960
+                                        },
+                                        "hasPerformance": true
+                                    }
+                                ],
+                                "visualization": "featureExplorer",
+                                "isSupportedOnMcu": true,
+                                "mcuSupportError": null,
+                                "additionalMetrics": [
+                                    {
+                                        "name": "Area under ROC Curve",
+                                        "value": "0.89",
+                                        "fullPrecisionValue": 0.8861335300041105,
+                                        "tooltipText": "Area Under the Receiver Operating Characteristic Curve. As provided by sklearn.metrics.roc_auc_score",
+                                        "link": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html"
+                                    },
+                                    {
+                                        "name": "Weighted average Precision",
+                                        "value": "0.72",
+                                        "fullPrecisionValue": 0.715891475176207,
+                                        "tooltipText": "Weighted average precision. (averaging the support-weighted mean per label). As provided by sklearn.metrics.classification_report",
+                                        "link": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html"
+                                    },
+                                    {
+                                        "name": "Weighted average Recall",
+                                        "value": "0.81",
+                                        "fullPrecisionValue": 0.8088033012379643,
+                                        "tooltipText": "Weighted average recall. (averaging the support-weighted mean per label). As provided by sklearn.metrics.classification_report",
+                                        "link": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html"
+                                    },
+                                    {
+                                        "name": "Weighted average F1 score",
+                                        "value": "0.76",
+                                        "fullPrecisionValue": 0.756967790528503,
+                                        "tooltipText": "Weighted average f1 score. (averaging the support-weighted mean per label). As provided by sklearn.metrics.classification_report",
+                                        "link": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html"
+                                    }
+                                ]
+                            }
+                        ],
+                        "hasTrainedModel": true,
+                        "mode": "classification",
+                        "imageInputScaling": "0..1",
+                        "labels": [],
+                        "thresholds": [
+                            {
+                                "key": "min_confidence_rating",
+                                "description": "Minimum confidence rating",
+                                "helpText": "Threshold score for trusting the model. If the confidence rating is below this value the sample will be tagged as 'uncertain'.",
+                                "value": 0.6
+                            }
+                        ]
+                    }
+                }
+            ],
+            "learnBlockAnomalyConfigs": [],
+            "postProcessingBlockConfigs": [],
+            "complete": true,
+            "configured": true,
+            "isStale": true,
+            "tags": [],
+            "createdByUser": {
+                "id": 394022,
+                "name": "ChristianHenriquedeSousa",
+                "username": "ChristianHenriquedeSousa"
+            }
+        }
+    ],
+    "metricKeysByCategory": [
+        {
+            "category": "inputBlockConfig",
+            "metricKeys": [
+                {
+                    "name": "Img_Height",
+                    "description": "Image height",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "Img_Width",
+                    "description": "Image width",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "Resize_Mode",
+                    "description": "Resize mode",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "select",
+                        "options": [
+                            "squash",
+                            "fit-short",
+                            "fit-long",
+                            "crop"
+                        ]
+                    },
+                    "showInTable": false
+                }
+            ]
+        },
+        {
+            "category": "dspBlockConfig",
+            "metricKeys": [
+                {
+                    "name": "Norm",
+                    "description": "Normalization",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "select",
+                        "options": [
+                            "None",
+                            "StandardScaler"
+                        ]
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "Col_dep",
+                    "description": "Image > Color depth (Processing Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "string",
+                        "options": []
+                    },
+                    "showInTable": false
+                }
+            ]
+        },
+        {
+            "category": "learnBlockConfig",
+            "metricKeys": [
+                {
+                    "name": "Model",
+                    "description": "ML Model architecture (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "string",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "Tc",
+                    "description": "Training cycles (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "Lr",
+                    "description": "Learning rate (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "Lo",
+                    "description": "Use learned optimizer? (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "boolean",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "Acw",
+                    "description": "Auto-weight classes (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "boolean",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "Data_Aug",
+                    "description": "Data augmentation (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "boolean",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "Val_Size",
+                    "description": "Validation set size (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "Val_Key",
+                    "description": "Split train/validation set on metadata key (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "string",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "Mode",
+                    "description": "Visual / expert mode (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "select",
+                        "options": [
+                            "visual",
+                            "expert"
+                        ]
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "Thr_Mcr",
+                    "description": "Minimum confidence rating (Learn Block #1)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": false
+                }
+            ]
+        },
+        {
+            "category": "impulseMetrics",
+            "metricKeys": [
+                {
+                    "name": "f32_V_Acc",
+                    "description": "Accuracy (float32, validation set)",
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": true
+                },
+                {
+                    "name": "f32_T_Acc",
+                    "description": "Accuracy (float32, test set)",
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": true
+                },
+                {
+                    "name": "i8_V_Acc",
+                    "description": "Accuracy (int8, validation set)",
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": true
+                },
+                {
+                    "name": "i8_T_Acc",
+                    "description": "Accuracy (int8, test set)",
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": true
+                },
+                {
+                    "name": "f32_Latency",
+                    "description": "float32 Latency for the complete impulse. Estimate for Espressif ESP-EYE (ESP32 240MHz), you can change the target at the top of this page..",
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": true
+                },
+                {
+                    "name": "f32_RAM",
+                    "description": "float32 RAM for the complete impulse. Estimate for Espressif ESP-EYE (ESP32 240MHz), you can change the target at the top of this page. (in RAM Optimized mode).",
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": true
+                },
+                {
+                    "name": "f32_Flash",
+                    "description": "float32 Flash for the complete impulse. Estimate for Espressif ESP-EYE (ESP32 240MHz), you can change the target at the top of this page. (in RAM Optimized mode).",
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": true
+                },
+                {
+                    "name": "i8_Latency",
+                    "description": "int8 Latency for the complete impulse. Estimate for Espressif ESP-EYE (ESP32 240MHz), you can change the target at the top of this page..",
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": true
+                },
+                {
+                    "name": "i8_RAM",
+                    "description": "int8 RAM for the complete impulse. Estimate for Espressif ESP-EYE (ESP32 240MHz), you can change the target at the top of this page. (in RAM Optimized mode).",
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": true
+                },
+                {
+                    "name": "i8_Flash",
+                    "description": "int8 Flash for the complete impulse. Estimate for Espressif ESP-EYE (ESP32 240MHz), you can change the target at the top of this page. (in RAM Optimized mode).",
+                    "type": "core",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": true
+                }
+            ]
+        },
+        {
+            "category": "learnBlockMetrics",
+            "metricKeys": [
+                {
+                    "name": "f32_V_AUC",
+                    "description": "float32 Area under ROC Curve (validation set)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "f32_V_WA_P",
+                    "description": "float32 Weighted average Precision (validation set)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "f32_V_WA_R",
+                    "description": "float32 Weighted average Recall (validation set)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "f32_V_WA_F1",
+                    "description": "float32 Weighted average F1 score (validation set)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "f32_T_AUC",
+                    "description": "float32 Area under ROC Curve (test set)",
+                    "type": "additional",
+                    "showInTable": false
+                },
+                {
+                    "name": "f32_T_WA_P",
+                    "description": "float32 Weighted average Precision (test set)",
+                    "type": "additional",
+                    "showInTable": false
+                },
+                {
+                    "name": "f32_T_WA_R",
+                    "description": "float32 Weighted average Recall (test set)",
+                    "type": "additional",
+                    "showInTable": false
+                },
+                {
+                    "name": "f32_T_WA_F1",
+                    "description": "float32 Weighted average F1 score (test set)",
+                    "type": "additional",
+                    "showInTable": false
+                },
+                {
+                    "name": "i8_V_AUC",
+                    "description": "int8 Area under ROC Curve (validation set)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "i8_V_WA_P",
+                    "description": "int8 Weighted average Precision (validation set)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "i8_V_WA_R",
+                    "description": "int8 Weighted average Recall (validation set)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": false
+                },
+                {
+                    "name": "i8_V_WA_F1",
+                    "description": "int8 Weighted average F1 score (validation set)",
+                    "type": "additional",
+                    "filteringType": {
+                        "type": "numeric",
+                        "options": []
+                    },
+                    "showInTable": false
+                }
+            ]
+        }
+    ],
+    "extraTableColumns": []
+}
